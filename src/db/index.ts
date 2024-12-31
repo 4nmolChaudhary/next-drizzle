@@ -3,7 +3,13 @@ import { Pool } from 'pg'
 
 import * as schema from '@/db/schemas'
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL! })
-console.log(process.env.DATABASE_URL)
+const pool = new Pool({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: parseInt(process.env.DB_PORT || '5432'),
+  database: process.env.DB_NAME,
+})
+
 export const db = drizzle(pool, { schema })
 export type DB = typeof db
