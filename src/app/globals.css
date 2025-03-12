@@ -9,39 +9,3 @@ body::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.208);
   border-radius: 1px;
 }
-
-.glitch {
-  background: url('../images/avatar.png');
-  background-size: cover;
-  animation: glitch 2s infinite steps(1);
-}
-.sticker {
-  background: url('../images/stickers/react-sticker.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@keyframes glitch {
-  0%,
-  100% {
-    background: url('../images/avatar.png');
-    background-size: cover;
-  }
-  92.5% {
-    background: url('../images/glitch-image-01.png');
-    background-size: cover;
-    opacity: 1;
-  }
-
-  95% {
-    background: url('../images/glitch-image-02.png');
-    background-size: cover;
-    opacity: 0;
-  }
-
-  97.5% {
-    background: url('../images/glitch-image-03.png');
-    background-size: cover;
-    opacity: 1;
-  }
-}
-
